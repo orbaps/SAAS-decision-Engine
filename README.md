@@ -1,4 +1,4 @@
-# Remix: SaaS Decision Engine
+# SaaS Decision Engine
 
 A deterministic analysis platform for SaaS inventory utilization and cost optimization recommendations based on multi-variable telemetry data.
 
