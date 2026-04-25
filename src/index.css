@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-surface: #050505;
+  --color-surface-dim: #050505;
+  --color-surface-bright: #1A1A1A;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #0A0A0A;
+  --color-surface-container: #0F0F0F;
+  --color-surface-container-high: #141414;
+  --color-surface-container-highest: #1A1A1A;
+  --color-on-surface: #FFFFFF;
+  --color-on-surface-variant: rgba(255, 255, 255, 0.4);
+  --color-inverse-surface: #FFFFFF;
+  --color-inverse-on-surface: #050505;
+  --color-outline: rgba(255, 255, 255, 0.1);
+  --color-outline-variant: rgba(255, 255, 255, 0.05);
+  --color-surface-tint: #F27D26;
+  --color-primary: #F27D26;
+  --color-on-primary: #000000;
+  --color-primary-container: #2A1A0F;
+  --color-on-primary-container: #F27D26;
+  --color-inverse-primary: #000000;
+  --color-secondary: #FFFFFF;
+  --color-on-secondary: #000000;
+  --color-secondary-container: #1A1A1A;
+  --color-on-secondary-container: #FFFFFF;
+  --color-tertiary: #F27D26;
+  --color-on-tertiary: #000000;
+  --color-tertiary-container: #2A1A0F;
+  --color-on-tertiary-container: #F27D26;
+  --color-error: #FF3B30;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #2A0F0F;
+  --color-on-error-container: #FF3B30;
+  --color-status-keep: #4ade80;
+  --color-status-remove: #f87171;
+  --color-status-downgrade: #fbbf24;
+  --color-status-flag: #60a5fa;
+
+  --spacing-data-density: 8px;
+  --spacing-container-margin: 40px;
+  --spacing-section-gap: 64px;
+  --spacing-element-gap: 16px;
+  --spacing-unit: 4px;
+  --spacing-gutter: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-on-surface font-sans antialiased;
+  }
+  
+  /* Global reset for non-rounded corners as per design system */
+  * {
+    @apply rounded-none;
+  }
+  
+  /* Secondary scrollbar style */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-container-lowest;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-outline-variant hover:bg-outline transition-colors;
+  }
+}
+
+@layer components {
+  .label-caps {
+    @apply font-sans font-bold text-[12px] uppercase tracking-[0.1em] leading-none;
+  }
+  
+  .data-mono {
+    @apply font-mono font-semibold text-[14px] uppercase tracking-[0.05em] leading-none;
+  }
+}

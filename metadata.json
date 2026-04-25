@@ -1,0 +1,6 @@
+{
+  "name": "Remix: SaaS Decision Engine",
+  "description": "Deterministic analysis of SaaS inventory utilization and cost optimization recommendations based on multi-variable telemetry data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
